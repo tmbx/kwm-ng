@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9132E5E0-8BA5-492B-B8E2-1173FEC4FAD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kwm</RootNamespace>
+    <AssemblyName>Kwm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CpGetOpt, Version=0.4.3071.38362, Culture=neutral, PublicKeyToken=59697a63fb01c49c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\CpGetOpt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\ApplicationMonitor.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\ControlMonitor.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\HookMonitor.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\IInactivityMonitor.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\LastInputMonitor.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\MonitorBase.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\MonitorCreator.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\MonitorType.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\User32.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\Win32Hook.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\Win32LastInputInfo.cs" />
+    <Compile Include="EtKwm\KcsLib\UserInactivityMonitor\Win32Message.cs" />
+    <Compile Include="EtKwm\KwmLib\AnpMsg.cs" />
+    <Compile Include="EtKwm\KwmLib\EAnpBroker.cs" />
+    <Compile Include="EtKwm\KwmLib\EAnpThread.cs" />
+    <Compile Include="EtKwm\KcsLib\KWorkerThread.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\FilterByExtension.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\IFolderFilter.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\IFolderFilterSite.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\IMalloc.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\IShellFolder.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellAddRecent.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellApi.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellBrowseForFolderDialog.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellExecute.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellFileOperation.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellFunctions.cs" />
+    <Compile Include="EtKwm\KcsLib\ShellLib\ShellGUIDs.cs" />
+    <Compile Include="EtKwm\KwmLib\KwmLogging.cs" />
+    <Compile Include="Kcd\WmKcd.cs" />
+    <Compile Include="Kcd\WmKcdBroker.cs" />
+    <Compile Include="Kcd\WmKcdThread.cs" />
+    <Compile Include="KwsApp\Chat\Chat.cs" />
+    <Compile Include="KwsApp\Base\KwsApp.cs" />
+    <Compile Include="EtKwm\KwmLib\AnpTransport.cs" />
+    <Compile Include="EtKwm\KwmLib\HttpQuery.cs" />
+    <Compile Include="EtKwm\KwmLib\KwmUtil.cs" />
+    <Compile Include="EtKwm\KcsLib\KBase.cs" />
+    <Compile Include="EtKwm\KwmLib\EAnp.cs" />
+    <Compile Include="EtKwm\KcsLib\KDate.cs" />
+    <Compile Include="EtKwm\KcsLib\KFile.cs" />
+    <Compile Include="EtKwm\KcsLib\KSocket.cs" />
+    <Compile Include="EtKwm\KcsLib\KUtil.cs" />
+    <Compile Include="EtKwm\KcsLib\KSyscalls.cs" />
+    <Compile Include="EtKwm\KwmLib\KAnp.cs" />
+    <Compile Include="Kmod\K3p.cs" />
+    <Compile Include="Kmod\K3pLoginTicket.cs" />
+    <Compile Include="Kmod\K3pTransport.cs" />
+    <Compile Include="Kmod\KmodThread.cs" />
+    <Compile Include="Kmod\WmKmodBroker.cs" />
+    <Compile Include="KwsApp\Kfs\Kfs.cs" />
+    <Compile Include="KwsApp\Pb\Pb.cs" />
+    <Compile Include="KwsApp\Vnc\RunningOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KwsApp\Vnc\RunningOverlay.designer.cs">
+      <DependentUpon>RunningOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KwsApp\Vnc\RunningOverlayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KwsApp\Vnc\RunningOverlayControl.designer.cs">
+      <DependentUpon>RunningOverlayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KwsApp\Vnc\Vnc.cs" />
+    <Compile Include="Kws\KwsCoreData.cs" />
+    <Compile Include="Kws\KwsCoreOp.cs" />
+    <Compile Include="EtKwm\KwmLib\Console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtKwm\KwmLib\Console.designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtKwm\KwmLib\ConsoleMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtKwm\KwmLib\ConsoleMessage.designer.cs">
+      <DependentUpon>ConsoleMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wm\WmCoreOp.cs" />
+    <Compile Include="Kws\KwsKcdEventHandler.cs" />
+    <Compile Include="Kws\KwsKcdLoginHandler.cs" />
+    <Compile Include="Kws\KwsStateMachine.cs" />
+    <Compile Include="Kcd\WmAnpTunnel.cs" />
+    <Compile Include="Misc\Program.cs">
+    </Compile>
+    <Compile Include="Misc\Test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="KwsApp\Vnc\RunningOverlay.resx">
+      <DependentUpon>RunningOverlay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KwsApp\Vnc\RunningOverlayControl.resx">
+      <DependentUpon>RunningOverlayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtKwm\KwmLib\Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtKwm\KwmLib\ConsoleMessage.resx">
+      <DependentUpon>ConsoleMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\WmRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WmRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <Compile Include="Wm\WmCoreData.cs" />
+    <Compile Include="Wm\WmEAnp.cs" />
+    <Compile Include="Wm\WmLocalDbBroker.cs" />
+    <Compile Include="Misc\WmRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WmRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Wm\WmSerialization.cs" />
+    <Compile Include="Wm\WmStateMachine.cs" />
+    <Compile Include="Wm\WmUi.cs" />
+    <Compile Include="Wm\WmLogger.cs" />
+    <Compile Include="Wm\WmLocalDb.cs" />
+    <Compile Include="Kws\Workspace.cs" />
+    <Compile Include="Wm\WorkspaceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
